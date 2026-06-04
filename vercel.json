@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "rewrites": [
+        {
+            "source": "/contact",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/pricing",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/about-us",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/courses",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/",
+            "destination": "/index.html"
+        }
+    ]
+}

@@ -9,6 +9,9 @@ export const router = createBrowserRouter(
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="courses" element={<CoursesPage />} />
+        <Route path="*" element={<div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-20">
+          <h3 className="text-4xl text-center font-medium">Not Found Page</h3>
+        </div>} />
       </Route>
     </>
   )
