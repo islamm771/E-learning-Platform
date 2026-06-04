@@ -21,25 +21,25 @@ function App() {
         <div className="container mx-auto px-8 lg:px-16 xl:px-20 2xl:px-24 py-20">
           <div className="bg-white grid grid-cols-3 lg:grid-cols-4 2xl:grid-cols-7 gap-10 p-10 rounded-md">
             <div>
-              <img className="block mx-auto" src="/public/imgs/logos/zapier.png" alt="" />
+              <img className="block mx-auto" src="/imgs/logos/zapier.png" alt="" />
             </div>
             <div>
-              <img className="block mx-auto" src="/public/imgs/logos/spotify.png" alt="" />
+              <img className="block mx-auto" src="/imgs/logos/spotify.png" alt="" />
             </div>
             <div>
-              <img className="block mx-auto" src="/public/imgs/logos/zoom.png" alt="" />
+              <img className="block mx-auto" src="/imgs/logos/zoom.png" alt="" />
             </div>
             <div>
-              <img className="block mx-auto" src="/public/imgs/logos/amazon.png" alt="" />
+              <img className="block mx-auto" src="/imgs/logos/amazon.png" alt="" />
             </div>
             <div>
-              <img className="block mx-auto" src="/public/imgs/logos/adobe.png" alt="" />
+              <img className="block mx-auto" src="/imgs/logos/adobe.png" alt="" />
             </div>
             <div>
-              <img className="block mx-auto" src="/public/imgs/logos/notion.png" alt="" />
+              <img className="block mx-auto" src="/imgs/logos/notion.png" alt="" />
             </div>
             <div>
-              <img className="block mx-auto" src="/public/imgs/logos/netflix.png" alt="" />
+              <img className="block mx-auto" src="/imgs/logos/netflix.png" alt="" />
             </div>
           </div>
         </div>

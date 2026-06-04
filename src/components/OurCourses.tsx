@@ -47,7 +47,7 @@ const coursesData = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     level: "Advanced",
     duration: "6 weeks",
-    image: "/public/imgs/course6.png"
+    image: "/imgs/course6.png"
   }
 ]
 
