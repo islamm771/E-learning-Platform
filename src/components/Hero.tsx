@@ -2,7 +2,7 @@ import Button from "./Button"
 
 const Hero = () => {
   return (
-    <div className="container mx-auto xl:px-20 2xl:px-24 flex items-center justify-center py-20">
+    <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 flex items-center justify-center py-20">
       <div className="text-center">
         <h2 className="text-3xl font-bold">
           <span className="text-orange-400">Unlock</span> Your Creative Potential

@@ -1,51 +1,68 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router";
+
+const navLinks = [
+  {
+    to: "/",
+    title: "Home"
+  },
+  {
+    to: "/courses",
+    title: "Courses"
+  },
+  {
+    to: "/about-us",
+    title: "About us"
+  },
+  {
+    to: "/pricing",
+    title: "Pricing"
+  },
+  {
+    to: "/contact",
+    title: "Contact"
+  },
+]
+
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(() => {
+    return typeof window !== 'undefined' ? window.innerWidth >= 768 : false;
+  });
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768) {
-        setIsMenuOpen(true);
-      } else {
-        setIsMenuOpen(false);
-      }
-    });
-    return () => {
-      window.removeEventListener('resize', () => { });
+    const handleResize = () => {
+      setIsMenuOpen(window.innerWidth >= 768);
     };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <nav className="p-4 relative bg-white">
-      <div className="container mx-auto xl:px-20 2xl:px-24 flex items-center">
+    <nav className="sticky top-0 bg-white">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-4 flex items-center">
         <div className="size-12 rounded-md bg-orange-400 md:mr-8 p-2 flex items-center justify-center flex-col">
           <span className="block w-1/2 h-2 bg-white skew-x-320"></span>
           <span className="block w-1/2 h-2 bg-white -skew-x-320"></span>
           <span className="block w-1/2 h-2 bg-white skew-x-320"></span>
         </div>
-        <ul className={`absolute md:relative top-24 md:top-0 bg-white shadow-sm md:shadow-none w-11/12 md:w-max left-1/2 md:left-0 translate-x-[-50%] md:translate-x-0 flex flex-col md:flex-row gap-2 p-4 md:p-0 rounded-md md:rounded-none
+        <ul className={`absolute lg:relative top-24 lg:top-0 bg-white shadow-sm lg:shadow-none w-11/12 lg:w-max left-1/2 lg:left-0 translate-x-[-50%] lg:translate-x-0 flex flex-col lg:flex-row gap-2 p-4 lg:p-0 rounded-md lg:rounded-none
           ${isMenuOpen ? '' : 'hidden'}`}>
-          <li>
-            <a href="" className='block w-full text-gray-800 bg-gray-100 hover:bg-gray-100 py-2 px-4 rounded-md'>Home</a>
-          </li>
-          <li>
-            <a href="" className='block w-full text-gray-800 hover:bg-gray-100 py-2 px-4 rounded-md'>Courses</a>
-          </li>
-          <li>
-            <a href="" className='block w-full text-gray-800 hover:bg-gray-100 py-2 px-4 rounded-md'>About us</a>
-          </li>
-          <li>
-            <a href="" className='block w-full text-gray-800 hover:bg-gray-100 py-2 px-4 rounded-md'>Pricing</a>
-          </li>
-          <li>
-            <a href="" className='block w-full text-gray-800 hover:bg-gray-100 py-2 px-4 rounded-md'>Contact</a>
-          </li>
+          {navLinks.map((navLink, idx) => (
+            <li key={idx}>
+              <NavLink
+                to={navLink.to}
+                className={({ isActive }) => `block w-full text-gray-800 py-2 px-4 rounded-md ${isActive ? "bg-gray-100 hover:bg-gray-100" : ""}`}>
+                {navLink.title}
+              </NavLink>
+            </li>
+          ))}
         </ul>
         <div className="ml-auto">
           <a href="" className='text-gray-800 px-4 py-2 rounded-md'>Login</a>
           <a href="" className='ml-4 bg-orange-400 text-white px-4 py-2 rounded-md'>Sign Up</a>
         </div>
-        <button className="ml-4 md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button className="ml-4 lg:hidden cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <img src="/imgs/toggle.png" alt="" />
         </button>
         {/* <div className='flex justify-between items-center'>
