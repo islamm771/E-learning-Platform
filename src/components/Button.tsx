@@ -1,14 +1,15 @@
 import type { AnchorHTMLAttributes, ReactNode } from "react"
+import { Link } from "react-router"
 
 interface IProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode
 }
 
-const Button = ({ children, className, ...rest }: IProps) => {
+const Button = ({ children, className, href, ...rest }: IProps) => {
   return (
-    <a className={`px-4 py-2 rounded-md ${className || ''}`} {...rest}>
+    <Link to={href || "#"} className={`bg-orange-400 text-white px-4 py-2 rounded-md ${className || ''}`} {...rest}>
       {children}
-    </a>
+    </Link>
   )
 }
 

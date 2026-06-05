@@ -15,7 +15,7 @@ const Hero = () => {
           <Button href="/course" className="bg-orange-400 text-white">
             Explore Courses
           </Button>
-          <Button href="/pricings" className="bg-white text-gray-800 ml-4 border border-gray-100">
+          <Button href="/pricings" className="bg-white! text-gray-800! ml-4 border border-gray-100">
             View Pricing
           </Button>
         </div>

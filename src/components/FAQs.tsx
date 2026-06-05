@@ -25,7 +25,7 @@ const FAQs = () => {
   return (
     <div className="faqs">
       <div className="container mx-auto px-8 lg:px-16 xl:px-20 2xl:px-24 py-20">
-        <div className="bg-white grid grid-cols-1 md:grid-cols-12 gap-10 lg:p-10 rounded-md">
+        <div className="bg-white grid grid-cols-1 md:grid-cols-12 gap-10 p-6 lg:p-10 rounded-md">
           <div className="md:col-span-5">
             <h2 className="text-3xl font-semibold mb-5">Frequently Asked Questions</h2>
             <p className="text-gray-600">

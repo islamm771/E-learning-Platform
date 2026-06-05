@@ -78,7 +78,7 @@ const CoursesPage = () => {
               <p className="max-w-xl 2xl:max-w-4xl text-gray-600">
                 {course.description}
               </p>
-              <Button href="/benefits" className="text-gray-800 bg-gray-50 border border-gray-200">
+              <Button href={`/courses/${course.id}`} className="text-gray-800! bg-gray-50! border border-gray-200">
                 View Course
               </Button>
             </div>
