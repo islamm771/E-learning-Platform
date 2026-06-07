@@ -1,55 +1,6 @@
+import { Link } from "react-router"
+import { coursesData } from "../data"
 import Button from "./Button"
-
-const coursesData = [
-  {
-    id: 1,
-    title: "Web Design Fundamentals",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    level: "Beginner",
-    duration: "4 weeks",
-    image: "/imgs/course1.png"
-  },
-  {
-    id: 2,
-    title: "UI/UX Design",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    level: "Intermediate",
-    duration: "6 weeks",
-    image: "/imgs/course2.png"
-  },
-  {
-    id: 3,
-    title: "Mobile App Development",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    level: "Advanced",
-    duration: "8 weeks",
-    image: "/imgs/course3.png"
-  },
-  {
-    id: 4,
-    title: "Graphic Design for Beginners",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    level: "Beginner",
-    duration: "10 weeks",
-    image: "/imgs/course4.png"
-  },
-  {
-    id: 5,
-    title: "Front-End Web Development",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    level: "Intermediate",
-    duration: "10 weeks",
-    image: "/imgs/course5.png"
-  },
-  {
-    id: 6,
-    title: "Advanced JavaScript",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    level: "Advanced",
-    duration: "6 weeks",
-    image: "/imgs/course6.png"
-  }
-]
 
 const OurCourses = () => {
   return (
@@ -86,9 +37,9 @@ const OurCourses = () => {
               <p className="text-gray-600 mb-5">
                 {course.description}
               </p>
-              <a href="/courses" className="block w-full bg-gray-100 text-gray-800 text-sm font-medium text-center px-4 py-4 rounded-md cursor-pointer">
+              <Link to={`/courses/${course.id}`} className="block w-full bg-gray-100 text-gray-800 text-sm font-medium text-center px-4 py-4 rounded-md cursor-pointer">
                 Get it Now
-              </a>
+              </Link>
             </div>
           ))}
         </div>

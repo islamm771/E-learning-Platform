@@ -1,37 +1,5 @@
+import { benefitsData } from "../data"
 import Button from "./Button"
-
-const benefitsData = [
-  {
-    id: 1,
-    title: "Flexible Learning Schedule",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-  },
-  {
-    id: 2,
-    title: "Expert Instructors",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-  },
-  {
-    id: 3,
-    title: "Diverse Course Offerings",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-  },
-  {
-    id: 4,
-    title: "Updated Curriculum",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-  },
-  {
-    id: 5,
-    title: "Practical Projects and Assignments",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-  },
-  {
-    id: 6,
-    title: "Interactive Learning Environment",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-  }
-]
 
 const Benefits = () => {
   return (

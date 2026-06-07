@@ -1,19 +1,6 @@
+import { testimonialsData } from "../data"
 import Button from "./Button"
-
-const testimonialsData = [
-  {
-    id: 1,
-    name: "John Doe",
-    image: "/imgs/testimonial1.png",
-    feedback: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt tempore culpa recusandae, explicabo, natus beatae nemo odio quod minus numquam excepturi architecto commodi accusantium voluptas corrupti dolorum vitae asperiores fugit."
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    image: "/imgs/testimonial2.png",
-    feedback: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt tempore culpa recusandae, explicabo, natus beatae nemo odio quod minus numquam excepturi architecto commodi accusantium voluptas corrupti dolorum vitae asperiores fugit."
-  }
-]
+import UserTestimonial from "./UserTestimonial"
 
 
 const OurTestimonials = () => {
@@ -35,18 +22,7 @@ const OurTestimonials = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
           {testimonialsData.map((testimonial) => (
-            <div className="bg-white shadow-sm rounded-xl" key={testimonial.id}>
-              <p className="text-gray-600 py-8 px-6">
-                {testimonial.feedback}
-              </p>
-              <div className="flex items-center gap-4 bg-gray-100 px-6 py-4">
-                <img className="" src={testimonial.image} alt={testimonial.name} />
-                <h3 className="text-md font-semibold">{testimonial.name}</h3>
-                <button className="border border-gray-200 text-gray-800 font-medium px-4 py-2 rounded-md ml-auto cursor-pointer">
-                  Read Full Story
-                </button>
-              </div>
-            </div>
+            <UserTestimonial testimonial={testimonial} key={testimonial.id} />
           ))}
         </div>
       </div>

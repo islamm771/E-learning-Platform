@@ -1,56 +1,7 @@
 import Button from "../components/Button"
+import { coursesData } from "../data"
 
-const coursesData = [
-  {
-    id: 1,
-    title: "Web Design Fundamentals",
-    description: "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.",
-    level: "Beginner",
-    duration: "4 weeks",
-    image: "/imgs/course1.png",
-    instructor: "John Doe",
-    curriculum: [
-      "Introduction to HTML",
-      "Styling with CSS",
-      "Introduction to Responsive Design",
-      "Design Principles for Web",
-      "Building a Basic Website"
-    ]
-  },
-  {
-    id: 2,
-    title: "UI/UX Design",
-    description: "Master the art of creating intuitive user interfaces (UI) and enhancing user experiences (UX). Learn design principles, wireframing, prototyping, and usability testing techniques.",
-    level: "Intermediate",
-    duration: "6 weeks",
-    image: "/imgs/course2.png",
-    instructor: "Jane Doe",
-    curriculum: [
-      "Introduction to UI/UX Design",
-      "Design Principles and Best Practices",
-      "Wireframing and Prototyping",
-      "Usability Testing and User Research",
-      "Creating Engaging User Experiences"
-    ]
-  },
-  {
-    id: 3,
-    title: "Mobile App Development",
-    description: "Dive into the world of mobile app development. Learn to build native iOS and Android applications using industry-leading frameworks like Swift and Kotlin.",
-    level: "Advanced",
-    duration: "8 weeks",
-    image: "/imgs/course3.png",
-    instructor: "Alice Smith",
-    curriculum: [
-      "Introduction to Mobile App Development",
-      "Building iOS Apps with Swift",
-      "Building Android Apps with Kotlin",
-      "Cross-Platform Development with React Native",
-      "Publishing and Marketing Your App"
-    ]
-  },
 
-]
 
 
 const CoursesPage = () => {
@@ -113,7 +64,7 @@ const CoursesPage = () => {
                   <li className="border-b md:border-r md:border-b-0 border-gray-200 py-4 md:px-4" key={index}>
                     <h1 className="text-5xl font-bold mb-2">{String(index + 1).padStart(2, '0')}</h1>
                     <p className="text-gray-800 text-md font-medium">
-                      {item}
+                      {item.title}
                     </p>
                   </li>
                 ))}
