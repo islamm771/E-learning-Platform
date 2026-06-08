@@ -16,7 +16,7 @@ const OurTestimonials = () => {
             excepturi architecto commodi accusantium voluptas corrupti
             dolorum vitae asperiores fugit.
           </p>
-          <Button href="/courses" className="text-gray-800! bg-gray-50! border border-gray-200">
+          <Button href="#" className="text-gray-800! bg-gray-50! border border-gray-200">
             View All
           </Button>
         </div>

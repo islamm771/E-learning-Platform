@@ -15,7 +15,7 @@ const navLinks = [
     title: "About us"
   },
   {
-    to: "/pricing",
+    to: "/pricings",
     title: "Pricing"
   },
   {
@@ -39,7 +39,7 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <nav className="sticky top-0 bg-white">
+    <nav className="sticky top-0 bg-white z-10">
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-4 flex items-center">
         <Link to={"/"} className="size-12 rounded-md bg-orange-400 md:mr-8 p-2 flex items-center justify-center flex-col">
           <span className="block w-1/2 h-2 bg-white skew-x-320"></span>

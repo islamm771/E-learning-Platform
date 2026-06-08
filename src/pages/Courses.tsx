@@ -1,4 +1,5 @@
 import Button from "../components/Button"
+import Hero2 from "../components/Hero2"
 import { coursesData } from "../data"
 
 
@@ -7,18 +8,16 @@ import { coursesData } from "../data"
 const CoursesPage = () => {
   return (
     <>
-      <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <h2 className="text-4xl font-bold">
-            Online Courses on Design and Development
-          </h2>
-          <p className="text-gray-600">
-            Welcome to our online course page, where you can enhance your skills in design and development.
-            Choose from our carefully curated selection of 10 courses designed to provide you with comprehensive knowledge
-            and practical experience. Explore the courses below and find the perfect fit for your learning journey.
-          </p>
-        </div>
-      </div>
+      <Hero2>
+        <h2 className="text-4xl font-bold">
+          Online Courses on Design and Development
+        </h2>
+        <p className="text-gray-600">
+          Welcome to our online course page, where you can enhance your skills in design and development.
+          Choose from our carefully curated selection of 10 courses designed to provide you with comprehensive knowledge
+          and practical experience. Explore the courses below and find the perfect fit for your learning journey.
+        </p>
+      </Hero2>
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-20 space-y-12">
         {coursesData.map((course) => (
           <div className="course bg-white p-6 rounded-md" key={course.id}>
@@ -61,12 +60,18 @@ const CoursesPage = () => {
               </h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 items-center p-6 gap-4">
                 {course.curriculum.map((item, index) => (
-                  <li className="border-b md:border-r md:border-b-0 border-gray-200 py-4 md:px-4" key={index}>
-                    <h1 className="text-5xl font-bold mb-2">{String(index + 1).padStart(2, '0')}</h1>
+                  <li
+                    key={index}
+                    className="border-gray-200 py-4 md:px-4 border-b last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0"
+                  >
+                    <h1 className="text-5xl font-bold mb-2">
+                      {String(index + 1).padStart(2, "0")}
+                    </h1>
                     <p className="text-gray-800 text-md font-medium">
                       {item.title}
                     </p>
                   </li>
+
                 ))}
               </ul>
             </div>

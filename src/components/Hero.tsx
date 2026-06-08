@@ -12,7 +12,7 @@ const Hero = () => {
         </h4>
         <p className="text-gray-600">Learn from Industry Experts and Enhance Your Skills.</p>
         <div className="mt-6">
-          <Button href="/course" className="bg-orange-400 text-white">
+          <Button href="/courses" className="bg-orange-400 text-white">
             Explore Courses
           </Button>
           <Button href="/pricings" className="bg-white! text-gray-800! ml-4 border border-gray-100">

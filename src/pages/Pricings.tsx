@@ -1,42 +1,38 @@
-import { FaTimes } from "react-icons/fa"
-import { FaCheck } from "react-icons/fa6"
-import Button from "./Button"
+import { useState } from "react"
+import { FaCheck, FaTimes } from "react-icons/fa"
+import Button from "../components/Button"
+import FAQs from "../components/FAQs"
+import Hero2 from "../components/Hero2"
 
-// const pricingFeatures = {
-//   free: [
-//     "Access to selected free courses.",
-//     "Basic community support.",
-//     "Limited course materials and resources.",
-//     "No certification upon completion.",
-//     "Ad-supported platform.",
-//     "Access to exclusive Pro Plan community forums.",
-//     "Early access to new courses and updates.",
-//   ],
-//   pro: [
-//     "Access to all courses.",
-//     "Exclusive Pro Plan community forums.",
-//     "Priority customer support."
-//   ]
-// }
-
-const OurPricing = () => {
+const PricingsPage = () => {
+  const [pricing, setPricing] = useState("monthly");
+  const handlePricing = (p: string) => {
+    setPricing(p)
+  }
   return (
-    <div className="our-pricing">
-      <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-20">
-        <h2 className="text-3xl font-semibold mb-5">Our Pricing</h2>
-        <div className="flex flex-col lg:flex-row lg:items-center items-start justify-between gap-y-6">
-          <p className="max-w-2xl text-gray-600">
-            Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Sunt tempore culpa recusandae,
-            explicabo, natus beatae nemo odio quod minus numquam
-            excepturi architecto commodi accusantium voluptas corrupti
-            dolorum vitae asperiores fugit.
-          </p>
-          <Button href="/pricings" className="text-gray-800! bg-gray-50! border border-gray-200">
-            View All
-          </Button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 lg:p-10">
+    <>
+      <Hero2>
+        <h2 className="text-4xl font-bold">
+          Our Pricings
+        </h2>
+        <p className="text-gray-600">
+          Welcome to SkillBridge's Pricing Plan page,
+          where we offer two comprehensive options to cater to your needs:
+          Free and Pro. We believe in providing flexible and affordable pricing
+          options for our services. Whether you're an individual looking to
+          enhance your skills or a business seeking professional development
+          solutions, we have a plan that suits you. Explore our pricing options
+          below and choose the one that best fits your requirements.
+        </p>
+      </Hero2>
+      <div className="p-2 mt-12 w-fit mx-auto bg-white rounded-md">
+        <button className={`px-5 py-3 rounded-md text-gray-800 cursor-pointer ${pricing === "monthly" ? "bg-orange-400 text-white" : ""}`}
+          onClick={() => handlePricing("monthly")}>Monthly</button>
+        <button className={`px-5 py-3 rounded-md text-gray-800 cursor-pointer ${pricing === "yearly" ? "bg-orange-400 text-white" : ""}`}
+          onClick={() => handlePricing("yearly")}>Yearly</button>
+      </div>
+      <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 pt-20">
+        <div className="bg-white grid grid-cols-1 md:grid-cols-2 items-center gap-10 p-6 lg:p-10 rounded-md">
           <div className="free-plan border border-gray-200 bg-white/25 rounded-xl p-4">
             <span className="bg-orange-100 border border-orange-200 rounded block w-full px-4 py-2 text-center capitalize font-medium">free Plan</span>
             <h3 className="text-5xl font-bold py-6 text-center text-gray-800">
@@ -134,9 +130,11 @@ const OurPricing = () => {
             </Button>
           </div>
         </div>
+
       </div>
-    </div>
+      <FAQs />
+    </>
   )
 }
 
-export default OurPricing
+export default PricingsPage

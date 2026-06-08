@@ -105,19 +105,17 @@ import Hero2 from "../components/Hero2"
 const AboutUs = () => {
   return (
     <>
-      <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-20">
-        <Hero2>
-          <h2 className="text-4xl font-bold">
-            About Skillbridge
-          </h2>
-          <p className="text-gray-600">
-            Welcome to our platform, where we are passionate about empowering individuals
-            to master the world of design and development. We offer a wide range of
-            online courses designed to equip learners with the skills and knowledge
-            needed to succeed in the ever-evolving digital landscape.
-          </p>
-        </Hero2>
-      </div>
+      <Hero2>
+        <h2 className="text-4xl font-bold">
+          About Skillbridge
+        </h2>
+        <p className="text-gray-600">
+          Welcome to our platform, where we are passionate about empowering individuals
+          to master the world of design and development. We offer a wide range of
+          online courses designed to equip learners with the skills and knowledge
+          needed to succeed in the ever-evolving digital landscape.
+        </p>
+      </Hero2>
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-20 space-y-32">
         <div>
           <h2 className="text-4xl font-semibold mb-5">Achievements</h2>

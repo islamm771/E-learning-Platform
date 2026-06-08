@@ -36,6 +36,7 @@ const LoginPage = () => {
               prevEl: ".custom-prev",
               nextEl: ".custom-next",
             }}
+            loop
           >
             {testimonialsData.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
