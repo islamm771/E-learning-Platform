@@ -65,30 +65,6 @@ const Navbar = () => {
         <button className="ml-4 lg:hidden cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <img src="/imgs/toggle.png" alt="" />
         </button>
-        {/* <div className='flex justify-between items-center'>
-
-          <div>
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn bg-transparent shadow-none border-0 text-gray-300">
-              USD <FaAngleDown />
-            </div>
-            <ul tabIndex={-1} className="dropdown-content menu bg-gray-900 rounded-box z-1 w-32  p-2 shadow-sm top-12 text-gray-300">
-              <li><a>Item 1</a></li>
-              <li><a>Item 2</a></li>
-            </ul>
-          </div>
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn bg-transparent shadow-none border-0 text-gray-300">
-              English <FaAngleDown />
-            </div>
-            <ul tabIndex={-1} className="dropdown-content menu bg-gray-900 rounded-box z-1 w-32  p-2 shadow-sm top-12 text-gray-300">
-              <li><a>Arabic</a></li>
-              <li><a>Spanish</a></li>
-            </ul>
-          </div>
-        </div>
-
-        </div> */}
       </div>
 
     </nav>

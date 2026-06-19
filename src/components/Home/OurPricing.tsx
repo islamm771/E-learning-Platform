@@ -1,23 +1,6 @@
 import { FaTimes } from "react-icons/fa"
 import { FaCheck } from "react-icons/fa6"
-import Button from "./Button"
-
-// const pricingFeatures = {
-//   free: [
-//     "Access to selected free courses.",
-//     "Basic community support.",
-//     "Limited course materials and resources.",
-//     "No certification upon completion.",
-//     "Ad-supported platform.",
-//     "Access to exclusive Pro Plan community forums.",
-//     "Early access to new courses and updates.",
-//   ],
-//   pro: [
-//     "Access to all courses.",
-//     "Exclusive Pro Plan community forums.",
-//     "Priority customer support."
-//   ]
-// }
+import Button from "../ui/Button"
 
 const OurPricing = () => {
   return (
@@ -32,7 +15,7 @@ const OurPricing = () => {
             excepturi architecto commodi accusantium voluptas corrupti
             dolorum vitae asperiores fugit.
           </p>
-          <Button href="/pricings" className="text-gray-800! bg-gray-50! border border-gray-200">
+          <Button href="/pricings" className="text-gray-800! bg-gray-50! border border-gray-200 transition-all duration-300 hover:bg-orange-400! hover:text-white!">
             View All
           </Button>
         </div>

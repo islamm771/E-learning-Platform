@@ -1,6 +1,6 @@
 import { Link } from "react-router"
-import { coursesData } from "../data"
-import Button from "./Button"
+import { coursesData } from "../../data"
+import Button from "../ui/Button"
 
 const OurCourses = () => {
   return (
@@ -15,15 +15,15 @@ const OurCourses = () => {
             excepturi architecto commodi accusantium voluptas corrupti
             dolorum vitae asperiores fugit.
           </p>
-          <Button href="/courses" className="text-gray-800! bg-gray-50! border border-gray-200">
+          <Button href="/courses" className="text-gray-800! bg-gray-50! border border-gray-200 transition-all duration-300 hover:bg-orange-400! hover:text-white!">
             View All
           </Button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
           {coursesData.map((course) => (
-            <div className="bg-white shadow-sm px-6 py-10 rounded-xl" key={course.id}>
+            <div className="group bg-white shadow-sm px-6 py-10 rounded-xl" key={course.id}>
               <div className="overflow-hidden mb-5 rounded-lg">
-                <img className="hover:scale-150 transition-transform duration-300" src={course.image} alt={course.title} />
+                <img className="group-hover:scale-150 transition-transform duration-300" src={course.image} alt={course.title} />
               </div>
               <div className="flex items-center gap-4 mb-5">
                 <span className="bg-orange-100 text-orange-600 text-sm font-medium px-3 py-1 rounded-md">

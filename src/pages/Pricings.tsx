@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { FaCheck, FaTimes } from "react-icons/fa"
-import Button from "../components/Button"
-import FAQs from "../components/FAQs"
 import Hero2 from "../components/Hero2"
+import FAQs from "../components/Home/FAQs"
+import Button from "../components/ui/Button"
 
 const PricingsPage = () => {
   const [pricing, setPricing] = useState("monthly");

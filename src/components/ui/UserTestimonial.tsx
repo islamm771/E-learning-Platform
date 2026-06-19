@@ -1,4 +1,4 @@
-import type { ITestimonial } from "../interface"
+import type { ITestimonial } from "../../interface"
 
 interface IProps {
   testimonial: ITestimonial

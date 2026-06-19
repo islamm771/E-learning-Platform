@@ -1,15 +1,12 @@
-import { FaArrowLeft, FaArrowRight, FaCheck } from "react-icons/fa";
-import UserTestimonial from "../components/UserTestimonial";
-import { testimonialsData } from "../data";
+import { FaCheck } from "react-icons/fa";
 // import Swiper and modules styles
 import { useState } from "react";
 import { FaEye } from "react-icons/fa6";
 import { Link } from "react-router";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Button from "../components/Button";
+import StudentsTestimonial from "../components/StudentsTestimonial";
+import Button from "../components/ui/Button";
 
 
 const SignupPage = () => {
@@ -19,43 +16,7 @@ const SignupPage = () => {
       <div className="grid lg:grid-cols-2 gap-32">
 
         <div className="min-w-0 order-2 lg:order-1">
-          <h2 className="text-4xl font-medium mb-3">
-            Students Testimonials
-          </h2>
-          <p className="text-gray-600 mb-12">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ea, veritatis voluptas. Laboriosam incidunt obcaecati temporibus
-            iste dolorem fuga veritatis officiis quis eveniet doloremque ea sed,
-            maiores consequuntur, consectetur commodi deserunt?
-          </p>
-          <Swiper
-            className="w-full min-w-0"
-            modules={[Navigation]}
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation={{
-              prevEl: ".custom-prev",
-              nextEl: ".custom-next",
-            }}
-            loop
-          >
-            {testimonialsData.map((testimonial) => (
-              <SwiperSlide key={testimonial.id}>
-                <UserTestimonial testimonial={testimonial} />
-              </SwiperSlide>
-            ))
-            }
-          </Swiper>
-
-          <div className="flex items-center justify-end gap-4 mt-6">
-            <span className="custom-prev bg-white rounded p-3 text-gray-600 block w-fit cursor-pointer">
-              <FaArrowLeft size={20} />
-            </span>
-
-            <span className="custom-next bg-white rounded p-3 text-gray-600 block w-fit cursor-pointer">
-              <FaArrowRight size={20} />
-            </span>
-          </div>
+          <StudentsTestimonial />
         </div>
         <div className="order-1 lg:order-2">
           <div className="bg-white p-6 rounded-md">

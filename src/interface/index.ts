@@ -1,3 +1,5 @@
+import type { IconType } from "react-icons"
+
 export interface ITestimonial {
   id: number,
   name: string,
@@ -14,5 +16,22 @@ export interface ICourse {
   duration: string,
   image: string,
   instructor: string,
-  curriculum: { title: string, lessons: { title: string, duration: string }[] }[]
+  curriculum: ICurriculum[]
+}
+
+export interface ICurriculum { title: string, lessons: ILesson[] }
+
+export interface ILesson { title: string, duration: string }
+
+export interface IBenefit {
+  id: number,
+  title: string,
+  description: string
+}
+
+export interface IAboutItem {
+  id: number,
+  itemIcon: IconType,
+  title: string,
+  description: string
 }

@@ -1,14 +1,12 @@
-import { FaArrowLeft, FaArrowRight, FaCheck, FaEye } from "react-icons/fa";
-import UserTestimonial from "../components/UserTestimonial";
-import { testimonialsData } from "../data";
+import { FaCheck, FaEye } from "react-icons/fa";
 // import Swiper and modules styles
 import { useState } from "react";
 import { Link } from "react-router";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Button from "../components/Button";
+
+import StudentsTestimonial from "../components/StudentsTestimonial";
+import Button from "../components/ui/Button";
 
 
 const LoginPage = () => {
@@ -16,45 +14,8 @@ const LoginPage = () => {
   return (
     <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-20">
       <div className="grid lg:grid-cols-2 gap-32">
-
         <div className="min-w-0 order-2 lg:order-1">
-          <h2 className="text-4xl font-medium mb-3">
-            Students Testimonials
-          </h2>
-          <p className="text-gray-600 mb-12">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ea, veritatis voluptas. Laboriosam incidunt obcaecati temporibus
-            iste dolorem fuga veritatis officiis quis eveniet doloremque ea sed,
-            maiores consequuntur, consectetur commodi deserunt?
-          </p>
-          <Swiper
-            className="w-full min-w-0"
-            modules={[Navigation]}
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation={{
-              prevEl: ".custom-prev",
-              nextEl: ".custom-next",
-            }}
-            loop
-          >
-            {testimonialsData.map((testimonial) => (
-              <SwiperSlide key={testimonial.id}>
-                <UserTestimonial testimonial={testimonial} />
-              </SwiperSlide>
-            ))
-            }
-          </Swiper>
-
-          <div className="flex items-center justify-end gap-4 mt-6">
-            <span className="custom-prev bg-white rounded p-3 text-gray-600 block w-fit cursor-pointer">
-              <FaArrowLeft size={20} />
-            </span>
-
-            <span className="custom-next bg-white rounded p-3 text-gray-600 block w-fit cursor-pointer">
-              <FaArrowRight size={20} />
-            </span>
-          </div>
+          <StudentsTestimonial />
         </div>
         <div className="order-1 lg:order-2">
           <div className="bg-white p-6 rounded-md">
@@ -69,11 +30,11 @@ const LoginPage = () => {
             <form action="" className="space-y-4">
               <div className="flex flex-col">
                 <label htmlFor="" className="font-semibold mb-2">Email</label>
-                <input type="email" className="bg-gray-50 border border-gray-200 p-3 rounded-md" placeholder="Enter your email" />
+                <input type="email" className="bg-gray-50 border border-gray-200 p-3 rounded-md outline-0 focus:border-orange-400" placeholder="Enter your email" />
               </div>
               <div className="flex flex-col text-start relative">
                 <label htmlFor="" className="font-semibold mb-2">Passoword</label>
-                <input type={isPassord ? "password" : "text"} className="bg-gray-50 border border-gray-200 p-3 rounded-md" placeholder="Enter your password" />
+                <input type={isPassord ? "password" : "text"} className="bg-gray-50 border border-gray-200 p-3 rounded-md outline-0 focus:border-orange-400" placeholder="Enter your password" />
                 <span className="bg-gray-100 w-fit p-2 rounded absolute top-10 hover:bg-gray-200 right-4 cursor-pointer" onClick={() => setIsPassord(prev => !prev)}>
                   <FaEye />
                 </span>
@@ -106,7 +67,6 @@ const LoginPage = () => {
             </p>
           </div>
         </div>
-
       </div>
     </div>
   )
